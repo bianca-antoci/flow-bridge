@@ -1,0 +1,32 @@
+.navigation {
+    height: 100%;
+    width: 100%;
+}
+
+.menu-item {
+    padding: 10px 22px;
+    margin: 0 0 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+        width: 45px;
+    }
+
+    .label {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 20px;
+    }
+}
+
+.menu-item:hover {
+    background: #F8F9FB;
+    cursor: pointer;
+}
+
+.menu-item-selected {
+    background: #F8F9FB;
+}

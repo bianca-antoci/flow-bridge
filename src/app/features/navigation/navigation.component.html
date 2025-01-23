@@ -1,0 +1,9 @@
+<div class="navigation">
+    <div *ngFor="let menuItem of menuItems">
+        <div class="menu-item rounded-corners" [ngClass]="{'menu-item-selected' : menuItem.selected}"
+            [routerLink]="menuItem.path">
+            <div class="icon"><img [src]="menuItem.icon" /></div>
+            <div class="label">{{menuItem.label}}</div>
+        </div>
+    </div>
+</div>

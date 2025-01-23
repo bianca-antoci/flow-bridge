@@ -1,0 +1,28 @@
+/* All global styles */
+
+body {
+    background: #F9FAFE !important;
+}
+
+.content {
+    background: white;
+    width: 100%;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+
+    padding: 30px;
+}
+
+.rounded-corners {
+    border-radius: 30px;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: bolder;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
