@@ -5,23 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './features/navigation/navigation.component';
 import { HeaderComponent } from './features/header/header.component';
-import { LoadingSkeletonComponent } from './features/loading-skeleton/loading-skeleton.component';
-import { HomeComponent } from './features/home/home.component';
 import { TableListComponent } from './features/table-list/table-list.component';
 import { MapsComponent } from './features/maps/maps.component';
-import { AgGridAngular } from 'ag-grid-angular';
+import { AgGridModule } from 'ag-grid-angular';
 import { ClientSideRowModelModule, ModuleRegistry } from 'ag-grid-community';
-
+import { FormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 @NgModule({
   declarations: [
-    LoadingSkeletonComponent,
     AppComponent,
     NavigationComponent,
     HeaderComponent,
-    HomeComponent,
     TableListComponent,
     MapsComponent,
 
@@ -30,7 +27,9 @@ ModuleRegistry.registerModules([ClientSideRowModelModule]);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AgGridAngular,
+    AgGridModule,
+    FormsModule,
+		GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

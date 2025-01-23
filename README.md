@@ -1,27 +1,34 @@
-# DailyNews
+# Accessing the Deployed Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+The live version of this project is deployed on Firebase and can be accessed via this link:
 
-## Development server
+# How to Run the Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Clone the Git Repository
+- npm install
+- ng serve
 
-## Code scaffolding
+# Design Decisions and Choices
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Design Architecture
 
-## Build
+I opted for a side menu navigation to keep things straight to the point and easy to navigate. Each page covers specific content, making it simple for users to find what they need without feeling cluttered.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Choice of Libraries
 
-## Running unit tests
+Bootstrap:
+I chose Bootstrap because it’s a lifesaver for quickly creating responsive and attractive web pages. It comes with a bunch of ready-made styles and components that saved me a ton of time.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+AG Grid:
+AG Grid was my go-to for handling complex data tables. It’s super powerful and flexible, which is perfect for dealing with large datasets while keeping everything smooth and interactive.
 
-## Running end-to-end tests
+# Potential Improvements
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Responsive UI Enhancements:
+Although Bootstrap gets the job done, adding some custom styles can further polish the UI and make it look great on any device.
 
-## Further help
+Component Testing:
+Incorporating tests with something like Jest could help catch bugs early. It’s all about ensuring each part of the app functions as it should.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pagination Optimization:
+Tuning the pagination to use async data fetching instead of blocking the UI thread would enhance the user experience a lot.

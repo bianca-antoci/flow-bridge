@@ -1,3 +1,141 @@
-<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-alpine" [columnDefs]="columnDefs"
-    [rowData]="rowData" domLayout="autoHeight">
+<div class="d-flex justify-content-end mb-3">
+  <button type="button" class="btn btn-secondary" (click)="showModal()">
+    Add Sensor Data
+  </button>
+</div>
+
+<!-- Usually there is a modal service that has a function like .modal.show() with some parameters -->
+@if (isModalVisible) {
+<div class="modal show d-block">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Add Sensor Data</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form #sensorForm="ngForm">
+          <div class="mb-3">
+            <label>Id</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.id"
+              name="id"
+              required
+              #idRef="ngModel"
+              [class.is-invalid]="idRef.invalid && idRef.touched"
+            />
+            @if(idRef.invalid && idRef.touched){
+            <div class="text-danger">Id is required!</div>
+            }
+          </div>
+          <div class="mb-3">
+            <label>Box Id</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.box_id"
+              name="box_id"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Sensor Type</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.sensor_type"
+              name="sensor_type"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Unit</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.unit"
+              name="unit"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Range L</label>
+            <input
+              type="number"
+              class="form-control"
+              [(ngModel)]="newSensor.range_l"
+              name="range_l"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Range U</label>
+            <input
+              type="number"
+              class="form-control"
+              [(ngModel)]="newSensor.range_u"
+              name="range_u"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Longitude</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.longitude"
+              name="longitude"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Latitude</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="newSensor.latitude"
+              name="latitude"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Reading</label>
+            <input
+              type="number"
+              class="form-control"
+              [(ngModel)]="newSensor.reading"
+              name="reading"
+            />
+          </div>
+          <div class="mb-3">
+            <label>Reading ts</label>
+            <input
+              type="datetime-local"
+              class="form-control"
+              [(ngModel)]="newSensor.reading_ts"
+              name="reading_ts"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">
+          Cancel
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          [disabled]="sensorForm.invalid"
+          (click)="onSubmit(sensorForm)"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+}
+
+<ag-grid-angular
+  class="ag-theme-alpine mt-2 h-100 w-100"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [gridOptions]="gridOptions"
+>
 </ag-grid-angular>
