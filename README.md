@@ -32,4 +32,4 @@ Incorporating tests with something like Jest could help catch bugs early. It’s
 ## Pagination:
 
 Load the data in smaller chunks and implement table pagination.
-Currently UI thread is blocked a few frames every time the JSON is loaded in memory. (
+Currently UI thread is blocked a few frames every time the JSON is loaded in memory.
