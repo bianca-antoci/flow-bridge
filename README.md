@@ -7,7 +7,7 @@ https://flow-bridge-5cc5b.web.app
 
 - Make sure you have the Angular CLI installed.
 - Clone this repo `git clone https://github.com/bianca-antoci/flow-bridge.git`.
-- Nagivate to the folder and then run `npm install`. Make sure there are no errors.
+- Navigate to the folder and then run `npm install`. Make sure there are no errors. In some cases you might have to try `npm install --force`
 - Run the project by `ng serve`.
 
 # Design Architecture
