@@ -1,4 +1,4 @@
-# Accessing the Deployed Project
+# Live Demo
 
 The live version of this project is deployed on Firebase and can be accessed via this link:
 https://flow-bridge-5cc5b.web.app
