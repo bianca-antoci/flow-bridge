@@ -14,7 +14,6 @@ export class TableListComponent implements OnInit, OnDestroy {
   public isModalVisible: boolean = false;
   public newSensor: SensorDataModel = new SensorDataModel();
   public rowData: SensorDataModel[] = [];
-  public gridOptions: GridOptions;
 
   public columnDefs: ColDef[] = [
     {
